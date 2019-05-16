@@ -8,7 +8,11 @@ public class ManyThreadTest implements PerformanceTest{
 
     private CountDownLatch latch = null;
 
-    private int threadNum = 500;
+    private int threadNum = 50;
+
+    public ManyThreadTest(PerformanceTest test) {
+        this.test = test;
+    }
 
     public ManyThreadTest(PerformanceTest test,int threadNum) {
         this.test = test;
